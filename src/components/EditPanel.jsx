@@ -3,7 +3,6 @@ import { AppContext } from "../context/AppContext";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { TiDeleteOutline } from "react-icons/ti";
 import { IoIosReturnLeft } from "react-icons/io";
-import Modal from 'react-modal';
 
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/css";
