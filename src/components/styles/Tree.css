@@ -1,0 +1,38 @@
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+.tree__filter {
+    margin-bottom: 0.6rem;
+}
+
+.tree-checkbox {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.tree-checkbox__label {
+    margin-left: 0.5rem;
+}
+
+.tree__button-toggle-all {
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 480px) {
+    .tree-checkbox {
+        align-items: start;
+    }
+
+    .tree-checkbox__input {
+        margin-top: 0.35rem;
+    }
+
+    .tree-checkbox__label {
+        text-align: start;
+    }
+}

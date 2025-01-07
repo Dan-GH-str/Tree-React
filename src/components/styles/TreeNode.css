@@ -1,0 +1,47 @@
+.tree-node {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.2rem 0;
+    border-left: 1px solid silver;
+    padding-left: 1rem;
+}
+
+.tree-node__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tree-node__title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.2rem 0;
+}
+
+.tree-node__edit {
+    margin-left: 0.5rem;
+}
+
+.tree-node__edit::after {
+    display: block;
+    content: "";
+    height: 2px; 
+    width: 0%; 
+    background-color: #213547; 
+    transition: width 0.4s ease-in-out;
+}
+
+.tree-node__edit:hover::after {
+    width: 100%;
+}
+
+.tree-node__children {
+    margin-left: 1rem;
+}
+
+.tree-node__additional-attribute {
+    text-align: left;
+    margin-bottom: 0;
+}

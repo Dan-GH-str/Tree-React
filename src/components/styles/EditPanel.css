@@ -1,0 +1,197 @@
+/* Стили для боковой менюшки */
+
+.edit-panel {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    right: 0;
+    /* внутренние отступы */
+    padding: 3rem 2rem;
+    /* цвет фона панели */
+    background: #ffffff;
+    /* поверх других элементов */
+    z-index: 2000;
+    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+    animation: shift-left .5s;
+}
+
+.edit-panel__title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.edit-panel__node-name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 0.9rem;
+}
+
+.edit-panel__node-name-title {
+    display: block;
+    margin: 0;
+}
+
+.edit-panel__list-item-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.edit-panel__input {
+    width: 35%;
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+.edit-panel__block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0.9rem 0;
+}
+
+.edit-panel__block h3 {
+    margin: 0.6rem 0;
+}
+
+.edit-panel__block ul {
+    margin: 0rem;
+}
+
+.edit-panel__list {
+    width: 100%;
+    text-align: start;
+}
+
+.edit-panel__list-item {
+    width: 100%;
+}
+
+.edit-panel__dlt-btn, .edit-panel__add-btn, .edit-panel__cancel-btn {
+    height: 35px;
+    box-sizing: border-box;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    padding: 4px 6px;
+}
+
+.edit-panel__add-btn {
+    margin-top: 1rem;
+}
+
+.edit-panel__add-icon, .edit-panel__dlt-icon {
+    display: flex;
+    font-size: 1.6rem;
+}
+
+.color-picker__layout {
+    width: 80%;
+    margin: 0.5rem 0;
+}
+
+.edit-panel__btn-group {
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.edit-panel__btn-group .btn {
+    margin-right: 1rem;
+}
+
+
+
+/* Стили для маски */
+
+.mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: transparent-to-visible .5s;
+}
+
+@keyframes transparent-to-visible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shift-left {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+
+
+
+/* Адаптивность */
+
+@media (max-width: 1280px) {
+    .edit-panel {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .color-picker__layout {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .edit-panel {
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
+
+    .edit-panel__title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-panel {
+        width: 100%;
+        padding: 1rem 0.5rem;
+    }
+
+    .edit-panel__list {
+        padding-left: 1.5rem;
+    }
+
+    .edit-panel__list-item-inner {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 1rem;
+    }
+
+    .edit-panel__input {
+        width: 45%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .edit-panel__dlt-btn, .edit-panel__add-btn, .edit-panel__cancel-btn {
+        margin: 0 0.4rem;
+    }
+}
